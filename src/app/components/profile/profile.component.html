@@ -1,0 +1,55 @@
+<form action="" class="search-form">
+  <div class="form-group">
+    <input type="text" class=" form-control" placeholder="search git users with username">
+  </div>
+</form>
+<div *ngIf="profile">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{profile.name}} <small>({{profile.login}})</small>
+      <span > Works at {{profile.company}}</span>
+      {{profile.location}}
+    </div>
+    <div class="panel-body">
+      <div class="row">
+      <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt=" 
+      profile image">
+      </div>
+      <div class="col- sm-4">
+        <ul class="list-group">
+          <li class="list-group-item">{{profile.bio}}</li>
+          <li class="list-group-item"><a href="
+            {{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
+          <li class="list-group-item"><a href="
+          emailto:{{profile.email}}">{{profile.email}}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <div>
+          <p>
+            <span class="label label-default">{{profile.followers}} Followers</span>
+            <span class="label label-primary">Folowing {{profile.following}}</span>
+            <span class="label label-success">{{profile.public_git}} Public git</span>
+            <span class="label label-info">{{profile.public_repos}} Public Repos</span>
+          </p>
+          <p><a href="{{profile.html_url}}" target="_blank" class="btn
+             btn-success btn-sm">View profile on github</a></p>
+             <div class="panel panel-default">
+               <div class="panel-heading">
+                 <h3 class="panel-title">Repos</h3>
+               </div>
+               <div class="panel-body" *ngFor="let repo of repos">
+                 <p class="clearfix">
+                   {{repo.name}} <a href="{{repo.html_url}}" target="_blank" 
+                   class="btn btn-sm btn-warning pull-right">View this projecton github</a>
+                 </p>
+                 <p>{{repo.description}}</p>
+
+               </div>
+             </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+</div>
