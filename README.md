@@ -13,7 +13,7 @@ This is an application which takes the role of github in the search area.It lets
 Installation
 
 You will need first to have node,npm, tsc and watchman installed.
-Clone this repository from my Github account jeffmusa
+Clone this repository from my Github account Rickyngotho
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 Technologies Used
 
